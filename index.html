@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dulce Tentación - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f5;
+      color: #5c3d5e;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #d63384;
+      padding: 15px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    select {
+      font-size: 18px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: white;
+      color: #d63384;
+      font-weight: 600;
+      cursor: pointer;
+      min-width: 260px;
+    }
+
+    header {
+      max-width: 800px;
+      margin: 40px auto 20px;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 42px;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    h2 {
+      font-weight: normal;
+      color: #a44b70;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .main-img {
+      max-width: 90%;
+      width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      margin: 30px auto;
+      display: block;
+    }
+
+    .btn-formulario {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background-color: #d63384;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-formulario:hover {
+      background-color: #a11d62;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #999;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+      select {
+        font-size: 16px;
+        min-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú desplegable -->
+  <nav>
+    <select id="recetas-menu">
+      <option value="">🍰 Selecciona una receta</option>
+      <option value="cupcakes.html">🧁 Cupcakes de Vainilla</option>
+      <option value="brownies.html">🍫 Brownies de Chocolate</option>
+      <option value="cheesecake.html">🍓 Cheesecake de Fresa</option>
+    </select>
+  </nav>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Bienvenido a Dulce Tentación</h1>
+    <h2>El lugar donde los postres caseros cobran vida 💖</h2>
+  </header>
+
+  <!-- Imagen principal decorativa -->
+  <img src="pasteleria.jpg" alt="Repostería casera" class="main-img" />
+
+  <!-- Botón para ir al formulario -->
+  <a href="Formulario.html" class="btn-formulario">📋 Ir al Formulario</a>
+
+  <!-- Pie de página -->
+  <div class="footer">
+    © 2025 Dulce Tentación | Síguenos en Instagram: @dulcetentacion
+  </div>
+
+  <script>
+    document.getElementById('recetas-menu').addEventListener('change', function () {
+      if (this.value) {
+        window.location.href = this.value;
+      }
+    });
+  </script>
+
+</body>
+</html>

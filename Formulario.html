@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta de Recetas</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom, #ffecf2, #f0f9ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 6px 6px 0px #fbb6ce;
+      max-width: 450px;
+      width: 90%;
+      border: 3px solid #ffb6c1;
+    }
+    h2 {
+      text-align: center;
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 15px;
+      color: #555;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 2px solid #ffb6c1;
+      border-radius: 8px;
+      box-shadow: 2px 2px 0px #fbb6ce;
+      background: #fffafc;
+    }
+    textarea {
+      resize: none;
+      height: 70px;
+    }
+    button {
+      background: #ff69b4;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      box-shadow: 3px 3px 0px #fbb6ce;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://formspree.io/f/xdkdrqzw" method="POST">
+    <h2>Encuesta de Recetas</h2>
+
+    <!-- Sección: Sobre las recetas -->
+    <label>
+      1. ¿Qué te parecieron nuestras recetas?
+      <select name="opinión_recetas" required>
+        <option value="">Selecciona una opción</option>
+        <option>Excelente</option>
+        <option>Buena</option>
+        <option>Regular</option>
+        <option>Mala</option>
+      </select>
+    </label>
+
+    <label>
+      2. ¿Cuál fue tu receta favorita?
+      <input type="text" name="receta_favorita" placeholder="Escribe aquí tu respuesta" required>
+    </label>
+
+    <!-- Sección: Satisfacción general -->
+    <label>
+      3. ¿Qué tan satisfecho estás con la variedad de recetas?
+      <select name="satisfaccion_variedad" required>
+        <option value="">Selecciona una opción</option>
+        <option>Muy satisfecho</option>
+        <option>Satisfecho</option>
+        <option>Neutral</option>
+        <option>Poco satisfecho</option>
+        <option>Nada satisfecho</option>
+      </select>
+    </label>
+
+    <label>
+      4. ¿Volverías a visitar nuestro sitio para nuevas recetas?
+      <select name="volver_visitar" required>
+        <option value="">Selecciona una opción</option>
+        <option>Sí, definitivamente</option>
+        <option>Tal vez</option>
+        <option>No</option>
+      </select>
+    </label>
+
+    <!-- Sección: Experiencia de navegación -->
+    <label>
+      5. ¿Cómo calificarías tu experiencia al navegar por nuestro sitio web?
+      <select name="experiencia_navegacion" required>
+        <option value="">Selecciona una opción</option>
+        <option>Excelente</option>
+        <option>Buena</option>
+        <option>Regular</option>
+        <option>Mala</option>
+      </select>
+    </label>
+
+    <label>
+      6. ¿Encontraste fácilmente lo que buscabas?
+      <select name="facilidad_busqueda" required>
+        <option value="">Selecciona una opción</option>
+        <option>Sí</option>
+        <option>Más o menos</option>
+        <option>No</option>
+      </select>
+    </label>
+
+    <!-- Sección: Contacto -->
+    <label>
+      Nombre:
+      <input type="text" name="nombre" required>
+    </label>
+
+    <label>
+      Correo electrónico:
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Comentarios adicionales:
+      <textarea name="comentarios"></textarea>
+    </label>
+
+    <button type="submit">Enviar Respuestas</button>
+  </form>
+</body>
+</html>
